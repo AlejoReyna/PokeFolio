@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/PokeFolio/static/css/main.149bcd00.css",
+    "main.js": "/PokeFolio/static/js/main.8db633c6.js",
+    "static/js/787.e64dc54a.chunk.js": "/PokeFolio/static/js/787.e64dc54a.chunk.js",
+    "static/media/js-mug.png": "/PokeFolio/static/media/js-mug.51ac163272ddd913a8df.png",
+    "static/media/preview-bear.png": "/PokeFolio/static/media/preview-bear.f77c3bdf3211a5baf84b.png",
+    "static/media/retro.webp": "/PokeFolio/static/media/retro.439bbbc081104f745716.webp",
+    "static/media/bearsito.png": "/PokeFolio/static/media/bearsito.de6d41b35a1255d2d9d8.png",
+    "static/media/pokemon.webp": "/PokeFolio/static/media/pokemon.345fb911446ed81b7466.webp",
+    "static/media/tic.webp": "/PokeFolio/static/media/tic.408aab916e4d7d8cd50e.webp",
+    "static/media/pl-logo.png": "/PokeFolio/static/media/pl-logo.c68ceaaddaf6007b61b3.png",
+    "static/media/PokemonGBA.ttf": "/PokeFolio/static/media/PokemonGBA.6211ee48ea626f34681e.ttf",
+    "index.html": "/PokeFolio/index.html",
+    "main.149bcd00.css.map": "/PokeFolio/static/css/main.149bcd00.css.map",
+    "main.8db633c6.js.map": "/PokeFolio/static/js/main.8db633c6.js.map",
+    "787.e64dc54a.chunk.js.map": "/PokeFolio/static/js/787.e64dc54a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.149bcd00.css",
+    "static/js/main.8db633c6.js"
+  ]
+}
