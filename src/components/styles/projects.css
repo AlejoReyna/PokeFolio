@@ -1,0 +1,13 @@
+.card {
+    font-family: 'PokeGBA';
+    margin-bottom: 2rem;
+   border: 1px solid black;
+}
+
+.card-body {
+    font-size: 14px;
+}
+.jump {
+    font-size: 12px;
+}
+

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Honk&display=swap');
+
+
+@font-face {
+    font-family: 'PokeGBA';
+    src: url("../fonts/PokemonGBA.ttf") format(truetype);
+
+}
+nav, .container {
+    background-image: url("../img/pokemon.webp");
+}
+.container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    width: 100%;
+}
+
+.container-about {
+    background-image: url("../img/retro.webp");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text {
+    font-family: "Honk", system-ui;
+    margin-top: 3vh;
+}
+
+.text h3 {
+    font-size: 35px;
+}
+
+.options {
+    
+    display: flex;
+}
+
+.jump:hover {
+    animation: jump 0.5s ease;
+}
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.button {
+    
+    background: none;
+    border: none;
+    margin-left: 10px;
+}
+
+.textbox
+{
+    width: 100%;
+    transform: translate(15%, 160%);
+
+}
+
+.overlay-text {
+    font-family: 'PokeGBA';
+    transform: translate(-0%, -210%);
+    color: rgb(0, 0, 0); /* Color del texto */
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Otras propiedades de estilo que desees */
+    text-align: left; /* Alineación del texto */
+    padding: 10px 50px; /* Espaciado interior del texto */
+    margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+    .overlay-text { 
+    transform: translate(-0%, -500%);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .overlay-text { 
+    transform: translate(-0%, -195%);
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay-text { 
+    transform: translate(-0%, -130%);
+    font-size: 20px;
+    }
+
+    .textbox {
+        transform: translate(1%, 10%);
+    }
+}
