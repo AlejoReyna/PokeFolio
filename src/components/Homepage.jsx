@@ -11,7 +11,7 @@ const Homepage = () => {
     <body>
     <main>
         
-    <div className="container p-0">
+    <div className="container-fluid home-body">
 
             
                     <div className="textbox-container w-100 ">
@@ -20,9 +20,9 @@ const Homepage = () => {
                             
                         </div>
 
-                        <div className="col-8">
-                            <div className="welcome-msg"> 
-                                    Welcome to my developer portfolio!
+                        <div className="col-8  d-flex justify-content-center">
+                            <div className="container-fluid welcome-msg"> 
+                                <p> Welcome to my developer portfolio! </p>
                             </div>
                      
                         </div>
@@ -31,16 +31,28 @@ const Homepage = () => {
                             
                         </div>
                     </div>
+                    
+                    {/** textbox row  */}
+                    <div className="row">  
+                        <div className="col-2">
 
-                    <div className="row">
-                            <img className="textbox img-fluid" src={ textbox } alt="A textbox"></img>
-                        <div className="text-from-box">
-                        <p> What'd you like to do next: </p>
-
-                            <button type="button"> Go to my projects </button>
-                            <button type="button"> Info about me c: </button>
                         </div>
+                        <div className="col-8 text-from-box">
+                            <img className="textbox img-fluid" src={ textbox } alt="A textbox"></img>
+                            <div className="text-container">
+                                <p> What'd you like to do next: </p>
+
+                                    <button type="button"> Go to my projects </button>
+                                    <button type="button"> Info about me </button>
+                            </div>
+                        </div>
+                        <div className="col-2">
+                            
+                         </div>
                     </div>
+                    {/** End of textbox row  */}
+
+                     
                 </div>
             </div>
 

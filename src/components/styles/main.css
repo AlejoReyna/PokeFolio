@@ -6,19 +6,27 @@
     src: url("../fonts/PokemonGBA.ttf") format(truetype);
 
 }
-nav, .container {
+nav, .container-fluid.home-body {
     background-image: url("../img/pokemon.webp");
 }
-.container {
+
+.home-body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     background-position: center;
-    width: 100%;
 }
 
-.text-from-box {
+.text-container {
+    transform: translate(-0%, -300%);
     font-family: 'PokeGBA';
+  
+}
+
+.textbox {
+    max-height: 14rem;
+    width: 100%;
+    margin-top: 15rem;
 }
 
 .text-from-box button:hover {
@@ -68,7 +76,9 @@ button {
 }
 
 .welcome-msg {
+    margin-top: 1.5rem;
     font-family: 'PokeGBA';
+    text-align: center;
 }
 /**
 .textbox
@@ -81,15 +91,9 @@ button {
 
 
 @media (min-width: 1200px) {
-    .textbox { 
-        width:50%;
-        max-height: 15rem;
-        transform: translate(-0%, 230%)
     
-    }
-
     .welcome-msg {
-        font-size: 40px;
+        font-size: 3rem;
     }
 }
 
@@ -104,13 +108,14 @@ button {
     nav {
         font-size: 14px;
     }
-    .overlay-text { 
-    transform: translate(-0%, -130%);
-    font-size: 20px;
+    
+    .textbox {
+    transform: translate(-0%, 180%);
     }
 
-    .textbox {
-    transform: translate(-0%, 150%);
+    .text-container {
+        transform: translate(-0%, 180%);
+        margin: 0 40px;
     }
 }
 

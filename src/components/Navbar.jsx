@@ -12,7 +12,7 @@ const Navbar = () => {
                      &lt; </span> <span class="blue"> Software Engineer </span> <span class="tag"> /&gt; </span> 
             </Link>
            */}
-           Alexis Alberto Reyna Sánchez 
+           Alexis Alberto Reyna Sánchez | Software Developer
         </div>
     </nav>
     );
