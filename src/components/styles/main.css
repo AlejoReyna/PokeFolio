@@ -17,6 +17,19 @@ nav, .container {
     width: 100%;
 }
 
+.text-from-box {
+    font-family: 'PokeGBA';
+}
+
+.text-from-box button:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
 .container-about {
     background-image: url("../img/retro.webp");
     height: 100vh;
@@ -54,27 +67,29 @@ nav, .container {
     margin-left: 10px;
 }
 
+.welcome-msg {
+    font-family: 'PokeGBA';
+}
+/**
 .textbox
 {
     width: 100%;
     transform: translate(15%, 160%);
 
 }
+**/
 
-.overlay-text {
-    font-family: 'PokeGBA';
-    transform: translate(-0%, -210%);
-    color: rgb(0, 0, 0); /* Color del texto */
-    font-size: 24px; /* Tamaño del texto */
-    font-weight: bold; /* Otras propiedades de estilo que desees */
-    text-align: left; /* Alineación del texto */
-    padding: 10px 50px; /* Espaciado interior del texto */
-    margin-bottom: 30px;
-}
 
 @media (min-width: 1200px) {
-    .overlay-text { 
-    transform: translate(-0%, -500%);
+    .textbox { 
+        width:50%;
+        max-height: 15rem;
+        transform: translate(-0%, 230%)
+    
+    }
+
+    .welcome-msg {
+        font-size: 40px;
     }
 }
 
@@ -85,12 +100,17 @@ nav, .container {
 }
 
 @media (max-width: 600px) {
+
+    nav {
+        font-size: 14px;
+    }
     .overlay-text { 
     transform: translate(-0%, -130%);
     font-size: 20px;
     }
 
     .textbox {
-        transform: translate(1%, 10%);
+    transform: translate(-0%, 150%);
     }
 }
+

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
-
+nav {
+    font-family: 'PokeGBA';
+}
 .navbar-brand {
     font-family: "Concert One", sans-serif;
     text-align: center; /* Centra el texto en la navbar */
