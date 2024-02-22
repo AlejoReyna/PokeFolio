@@ -34,7 +34,6 @@ flex-direction: column;
 }
 
 .text-container {
-    transform: translate(-0%, -200%);
     font-family: 'PokeGBA';
     text-align: center;
 }
@@ -42,14 +41,18 @@ flex-direction: column;
 .textbox {
     max-height: 16rem;
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
 }
 
 .textbox.img-fluid {
     padding: 0 8rem;
 }
+
 .text-from-box {
-    transform: translate(10%, -500%);
+    flex-direction: column;
+    font-family: 'PokeGBA';
+    transform: translate(-100%, 0%);
+    margin-bottom: 3.5rem;
 }
 .text-from-box button:hover {
     text-decoration: underline;
@@ -131,6 +134,10 @@ button {
         font-size: 2.4rem;
     }
 
+    .text-from-box {
+        margin-bottom: 5.3rem;
+    }
+
     .textbox {
         max-height: 20rem;
     }
@@ -145,9 +152,14 @@ button {
     }
 }
 
-@media (max-width: 570px ){
+@media (max-width: 580px ){
     nav {
         font-size: 0.53rem;
+    }
+
+    .text-from-box {
+        margin-bottom: 3.5rem;
+        font-size: 0.75rem;
     }
 
     .typing-text {
@@ -161,6 +173,12 @@ button {
 
     .typing-text {
         font-size:1.7rem ;
+    }
+
+    .text-from-box {
+  
+        transform: translate(-0%, -135%);
+        margin-bottom: 3.5rem;
     }
 
     .textbox.img-fluid {
