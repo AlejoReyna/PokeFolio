@@ -1,68 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/main.css';
 import './styles/fonts.css';
 import textbox from './img/newpoke.png';
 import { Link } from 'react-router-dom';
+import TypingText from './scripts/typingText';
 
+class Homepage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { isTypingFinished: false };
+        this.handleTypingFinished = this.handleTypingFinished.bind(this);
+    }
 
+    handleTypingFinished() {
+        this.setState({ isTypingFinished: true });
+    }
 
-const Homepage = () => {
-    return (
-    <body>
-    <main>
-        
-    <div className="container-fluid home-body">
-
-            
-                    <div className="textbox-container w-100 ">
-                    <div className="row">
-                        <div className="col-2">
-                            
-                        </div>
-
-                        <div className="col-8  d-flex justify-content-center">
-                            <div className="container-fluid welcome-msg"> 
-                                <p> Welcome to my developer portfolio! </p>
+    render() {
+        return (
+            <body>
+                <main>
+                    <div className="container-fluid home-body">
+                        <div className="textbox-container w-100 ">
+                            <div className="row main-row">
+                                <div className="col-2"></div>
+                                <div className="col-8">
+                                    <div className="container-fluid">
+                                        <TypingText onFinished={this.handleTypingFinished}/>
+                                    </div>
+                                </div>
+                                <div className="col-2"></div>
                             </div>
-                     
-                        </div>
+                           
+                                <div className="row bottom-row">
+                                   
+                                    
+                                    <div className="col-12">
+                                     <img className="textbox img-fluid" src={ textbox } alt="A textbox"></img>
+                                        <div className="text-from-box">
+                                                
+                                        </div>
+                                    </div>
 
-                        <div className="col-2">
-                            
+                                    
+                                </div>
+                                
+                           
                         </div>
                     </div>
-                    
-                    {/** textbox row  */}
-                    <div className="row">  
-                        <div className="col-2">
-
-                        </div>
-                        <div className="col-8 text-from-box">
-                            <img className="textbox img-fluid" src={ textbox } alt="A textbox"></img>
-                            <div className="text-container">
-                                <p> What'd you like to do next: </p>
-
-                                    <button type="button"> Go to my projects </button>
-                                    <button type="button"> Info about me </button>
-                            </div>
-                        </div>
-                        <div className="col-2">
-                            
-                         </div>
-                    </div>
-                    {/** End of textbox row  */}
-
-                     
-                </div>
-            </div>
-
-            
-            
-
-            
-        </main>
-    </body>
-    );
-};
+                </main>
+            </body>
+        );
+    }
+}
 
 export default Homepage;

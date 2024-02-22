@@ -2,13 +2,9 @@
 
 nav {
     font-family: 'PokeGBA';
+    font-size: 1.25rem;
 }
-.navbar-brand {
-    font-family: "Concert One", sans-serif;
-    text-align: center; /* Centra el texto en la navbar */
-    flex-grow: 1;
-    color: pink;
-}
+
 
 
 .navbar-toggler {

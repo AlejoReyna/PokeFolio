@@ -9,87 +9,113 @@ import PDL from './img/pl-logo.png';
 
 const Projects = () => {
     return(
-        <body>
+    <body>
         <main>
-            <div className="row">
-                <div className="container m-0 w-100">
+                <div className="container-fluid home-body m-0 w-100">
                     <div className="row">
-                        <div className="col-1">
-                            
+                        <div className="col-1 ">
+                            text
                         </div>
+
                         <div className="col-10">
-                            
-                            <div className="card">
-                                <div className="card-header">
-                                La cafetería del oso 
-                                </div>
-                                
-                                <div className="card-body m-0 p-0">
-                                <div className="row">    
-                                        <div className="col-6">
-                                           An app interface, with a register system.
+                            {/** Row that works as a container for the cards */}
+                            <div className="row">
 
-                                           <div className="options">
-                                           <button className="button" type="button">  <span class="jump"> Docs </span>  </button>
-                                            <button className="button" type="button">  <span class="jump">  Deployment  </span>  </button>
-                                           </div>
+                                {/** Left side column (on full-screen view) */} 
+                                <div className="col-6">
+                                    
+                                    {/** Card for 'La cafeteria del oso' project */} 
+                                        <div className="card">
 
+                                            {/** Header of card */} 
+                                            <div className="card-header">
+                                            La cafetería del oso 
+                                            </div>
+                                            {/** End of card header */} 
+                                            
+                                            {/** Card body container */}
+                                            <div className="card-body m-0 p-0">
+                                                {/** Row which contains both columns where cards are displayed while being in full screen view */}
+                                                <div className="row">
+                                                    {/** Left side column */}    
+                                                    <div className="col-6">
+                                                        An app interface, with a register system.
+
+                                                        <div className="options">
+                                                            <button className="button" type="button">  <span class="jump"> Docs </span>  </button>
+                                                            <button className="button" type="button">  <span class="jump">  Deployment  </span>  </button>
+                                                        </div>
+
+                                                        <div className="col-6">
+                                                            <img className="bear img-fluid" src={ Bearsito } alt="Dibujo de 'La cafetería del oso'"/>
+                                                        </div>
+
+                                                    </div>
+                                                    {/** End of left side column */}    
+                                                </div>
+                                                {/** End of row */}
+                                            </div>
+                                            {/** End of card body */}
                                         </div>
-                                        <div className="col-6">
-                                            <img className="bear img-fluid" src={ Bearsito } alt="Dibujo de 'La cafetería del oso'"/>
+                                    {/** End for 'La cafeteria del oso' card */} 
+
+                                    {/** Card for 'Platformer DemonList' project */} 
+                                        <div className="card">
+                                            <div className="card-header">
+                                            Platformer DemonList visual update
+                                            </div>
+                                            
+                                            <div className="card-body m-0 p-0">
+                                                <div className="row">    
+                                                        <div className="col-6">
+                                                        I redesigned almost all the CSS and JS code used on the website 
+                                                        platformerlist.com
+
+                                                        <div className="options">
+                                                        <button className="button" type="button">  <span class="jump"> Docs </span>  </button>
+                                                            <button className="button" type="button">  <span class="jump">  Deployment  </span>  </button>
+                                                        </div>
+
+                                                        </div>
+                                                        <div className="col-6">
+                                                            <img className="bear img-fluid" src={ PDL } alt="Dibujo de 'La cafetería del oso'"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    {/** End for 'Platformer DemonList' card */} 
+                                
+                                </div>
+                                {/** End of left side column (on full-screen view) */} 
+
+                                <div className="col-6">
+
+                                    {/** Card for 'Mortal Kombat 1' project */} 
+                                    <div className="card">
+                                        <div className="card-header">
+                                        Mortal Kombat 1
+                                        </div>
+                                        
+                                        <div className="card-body m-0 p-0">
+                                        <div className="row">    
+                                                <div className="col-6">
+                                                Fan-made promotional website of the 'Mortal Kombat 1' videogame
+
+                                                <div className="options">
+                                                <button className="button" type="button">  <span class="jump"> Docs </span>  </button>
+                                                    <button className="button" type="button">  <span class="jump">  Deployment  </span>  </button>
+                                                </div>
+
+                                                </div>
+                                                <div className="col-6">
+                                                    <img className="bear img-fluid" src={ Scorpion } alt="Dibujo de 'La cafetería del oso'"/>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div className="card">
-                                <div className="card-header">
-                                Mortal Kombat 1
-                                </div>
-                                
-                                <div className="card-body m-0 p-0">
-                                <div className="row">    
-                                        <div className="col-6">
-                                           Fan-made promotional website of the 'Mortal Kombat 1' videogame
 
-                                           <div className="options">
-                                           <button className="button" type="button">  <span class="jump"> Docs </span>  </button>
-                                            <button className="button" type="button">  <span class="jump">  Deployment  </span>  </button>
-                                           </div>
-
-                                        </div>
-                                        <div className="col-6">
-                                            <img className="bear img-fluid" src={ Scorpion } alt="Dibujo de 'La cafetería del oso'"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="card">
-                                <div className="card-header">
-                                Platformer DemonList visual update
-                                </div>
-                                
-                                <div className="card-body m-0 p-0">
-                                <div className="row">    
-                                        <div className="col-6">
-                                           I redesigned almost all the CSS and JS code used on the website 
-                                           platformerlist.com
-
-                                           <div className="options">
-                                           <button className="button" type="button">  <span class="jump"> Docs </span>  </button>
-                                            <button className="button" type="button">  <span class="jump">  Deployment  </span>  </button>
-                                           </div>
-
-                                        </div>
-                                        <div className="col-6">
-                                            <img className="bear img-fluid" src={ PDL } alt="Dibujo de 'La cafetería del oso'"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div className="card">
+                                    <div className="card">
                                 <div className="card-header">
                                 Barbershop system 
                                 </div>
@@ -111,38 +137,22 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
+                                {/** Card for 'La cafeteria del oso' project */} 
 
-
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-            
-            {/**  
-            <section className="projects">
-                <div class="row">
-                    <div className="container container-fluid">
-                        <div className="row">
-                            <div class="col-3">
-                                
-                            </div> 
-                            <div className="col-6 ">
-                                        { /** Card for project "La cafetería del oso" 
-                                        <div className="card">
-                                        
-                                        </div>
-                                   
+                                </div>
                             </div>
+                
                         </div>
-                    </div>
+
+                        <div className="col-1">
+                            texx
+                        </div>  
+                    </div>      
                 </div>
-            </section>
-            **/}
         </main>
     </body>
     
     );
 };
 
-export default Projects;
+export default Projects;  

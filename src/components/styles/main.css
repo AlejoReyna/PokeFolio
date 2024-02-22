@@ -6,9 +6,25 @@
     src: url("../fonts/PokemonGBA.ttf") format(truetype);
 
 }
+
 nav, .container-fluid.home-body {
     background-image: url("../img/pokemon.webp");
 }
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+}
+.main-row {
+    height: 50vh;
+}
+.bottom-row {
+    display: flex;
+    justify-content: flex-end;
+flex-direction: column;
+    height: 50vh;
+}
+ 
 
 .home-body {
     background-size: cover;
@@ -18,17 +34,23 @@ nav, .container-fluid.home-body {
 }
 
 .text-container {
-    transform: translate(-0%, -300%);
+    transform: translate(-0%, -200%);
     font-family: 'PokeGBA';
-  
+    text-align: center;
 }
 
 .textbox {
-    max-height: 14rem;
+    max-height: 16rem;
     width: 100%;
-    margin-top: 15rem;
+    margin-bottom: 3rem;
 }
 
+.textbox.img-fluid {
+    padding: 0 8rem;
+}
+.text-from-box {
+    transform: translate(10%, -500%);
+}
 .text-from-box button:hover {
     text-decoration: underline;
 }
@@ -80,42 +102,68 @@ button {
     font-family: 'PokeGBA';
     text-align: center;
 }
-/**
-.textbox
-{
-    width: 100%;
-    transform: translate(15%, 160%);
 
-}
-**/
-
-
-@media (min-width: 1200px) {
-    
-    .welcome-msg {
-        font-size: 3rem;
-    }
+.typing-text {
+    text-align: center;
+    font-family: 'PokeGBA';
+    font-size: 3.15rem;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    .overlay-text { 
-    transform: translate(-0%, -195%);
-    }
-}
-
-@media (max-width: 600px) {
-
+@media (max-width: 1000px) {
     nav {
-        font-size: 14px;
+        font-size: 1rem;
     }
     
-    .textbox {
-    transform: translate(-0%, 180%);
+    .typing-text {
+        font-size: 2.6rem;
     }
 
-    .text-container {
-        transform: translate(-0%, 180%);
-        margin: 0 40px;
+    
+   
+}
+
+@media (max-width: 810px) {
+    nav {
+        font-size: 0.8rem;
+    }
+
+    .typing-text {
+        font-size: 2.4rem;
+    }
+
+    .textbox {
+        max-height: 20rem;
+    }
+    .textbox.img-fluid {
+        padding: 0;
+        }
+}
+
+@media (max-width: 650px) {
+    nav {
+        font-size: 0.7rem;
     }
 }
 
+@media (max-width: 570px ){
+    nav {
+        font-size: 0.53rem;
+    }
+
+    .typing-text {
+        font-size: 1.8rem;
+    }
+}
+@media (max-width: 430px) {
+    nav {
+        font-size: 0.52rem;
+    }
+
+    .typing-text {
+        font-size:1.7rem ;
+    }
+
+    .textbox.img-fluid {
+        padding: 0;
+    }
+}

@@ -4,6 +4,10 @@
    border: 1px solid black;
 }
 
+.container-fluid.home-body {
+    background-image: url("../img/pokemon.webp");
+}
+
 .card-body {
     font-size: 14px;
 }
