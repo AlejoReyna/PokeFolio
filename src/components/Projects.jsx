@@ -14,7 +14,6 @@ const Projects = () => {
                 <div className="container-fluid home-body m-0 w-100">
                     <div className="row">
                         <div className="col-1 ">
-                            text
                         </div>
 
                         <div className="col-10">
@@ -28,8 +27,8 @@ const Projects = () => {
                                         <div className="card">
 
                                             {/** Header of card */} 
-                                            <div className="card-header">
-                                            La cafetería del oso 
+                                            <div className="card-header d-flex justify-content-center bg-black">
+                                            <span className="card-title"> La cafetería del oso </span>
                                             </div>
                                             {/** End of card header */} 
                                             
@@ -61,7 +60,7 @@ const Projects = () => {
 
                                     {/** Card for 'Platformer DemonList' project */} 
                                         <div className="card">
-                                            <div className="card-header">
+                                            <div className="card-header d-flex justify-content-center bg-black">
                                             Platformer DemonList visual update
                                             </div>
                                             
@@ -92,7 +91,7 @@ const Projects = () => {
 
                                     {/** Card for 'Mortal Kombat 1' project */} 
                                     <div className="card">
-                                        <div className="card-header">
+                                        <div className="card-header d-flex justify-content-center bg-black">
                                         Mortal Kombat 1
                                         </div>
                                         
@@ -116,7 +115,7 @@ const Projects = () => {
 
 
                                     <div className="card">
-                                <div className="card-header">
+                                <div className="card-header bg-black">
                                 Barbershop system 
                                 </div>
                                 
@@ -145,7 +144,6 @@ const Projects = () => {
                         </div>
 
                         <div className="col-1">
-                            texx
                         </div>  
                     </div>      
                 </div>

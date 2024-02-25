@@ -4,6 +4,9 @@
    border: 1px solid black;
 }
 
+.card-title {
+   color: white;
+}
 .container-fluid.home-body {
     background-image: url("../img/pokemon.webp");
 }

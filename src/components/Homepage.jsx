@@ -44,8 +44,8 @@ class Homepage extends React.Component {
 
                                     <div className="text-from-box d-flex justify-content-center align-items-center">
                                                 <p className="d-flex justify-content-center "> What'd you like to do next? </p>   
-                                                <button  type="button"> <p> Go to my projects </p> </button>
-                                                <button type="button"> <p> Info about me </p> </button>  
+                                                <button  type="button">  <Link to="/Projects">  Go to my projects </Link> </button>
+                                                <button type="button">   Info about me </button>  
                                         </div>
 
                                     
