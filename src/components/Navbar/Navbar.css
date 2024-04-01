@@ -1,0 +1,44 @@
+nav {
+    font-family: 'PokeGBA';
+    font-size: 1.25rem;
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+
+/** CSS for the smallest screens **/
+@media (min-width: 360px) {
+    .navbar-container {
+        font-size: 0.5rem;
+    }
+}
+
+/** CSS for small screens **/
+@media (min-width: 576px) {
+    .navbar-container {
+        font-size: 0.7rem;
+    }
+}
+
+/** CSS for medium screens **/
+@media (min-width: 768px) {
+    .navbar-container{
+        font-size: 0.9rem;
+    }
+}
+
+/** CSS for large screens **/
+@media (min-width: 992px) {
+    .navbar-container{
+        font-size: 1.1rem;
+    }
+}
+
+/** CSS for extra-large screens **/
+@media (min-width:1200px) {
+    .navbar-container{
+        font-size: 1.3rem;
+    }
+}

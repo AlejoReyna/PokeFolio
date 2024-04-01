@@ -1,0 +1,21 @@
+
+
+.right-side {
+    font-family: 'PokeGBA';
+}
+
+.dialogbox {
+    width: 85%;
+    height: 95vh;
+}
+
+.right-side {
+    transform: translate(0%, -85%);
+}
+
+.its-me {
+    height: 80vh;
+}
+.left-side {
+    transform: translate(0%, -107%);
+}

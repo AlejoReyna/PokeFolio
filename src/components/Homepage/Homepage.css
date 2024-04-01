@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Honk&display=swap');
+
+
+@font-face {
+  font-family: 'PokeGBA';
+  src: url("../Fonts/PokemonGBA.ttf") format(truetype);
+}
+
+/* Puts the background image in the whole page */
+nav, .home-body {
+  background-image: url("./Images/background.webp");
+}
+
+/* Adjustments for the background image */
+.home-body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+}
+
+/* Next two styles divide the whole page in two sections of the same size */
+.main-row {
+  height: 50vh;
+}
+
+.bottom-row {
+  height: 50vh;
+}
+
+.textbox {
+  max-height: 16rem;
+  
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for the typing text function */
+.typing-text {
+  text-align: center;
+  font-family: 'PokeGBA';
+  font-size: 3.15rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.options-container {
+    font-family: 'PokeGBA';
+    transform: translate(0%, -150%);
+}
+
+/** CSS for the smallest screens **/
+@media (min-width: 360px) {
+    .typing-text {
+        font-size: 1.6rem;
+    }
+
+}
+
+/** CSS for small screens **/
+@media (min-width: 576px) {
+    .typing-text {
+        font-size: 2rem;
+    }
+
+}
+
+/** CSS for medium screens **/
+@media (min-width: 768px) {
+    .typing-text {
+        font-size: 2.4rem;
+    }
+}
+
+/** CSS for large screens **/
+@media (min-width: 992px) {
+    .typing-text {
+        font-size: 2.8rem;
+    }
+}
+
+/** CSS for extra-large screens **/
+@media (min-width:1200px) {
+    .typing-text {
+        font-size: 3.2rem;
+    }
+
+    .textbox {
+      width: 60%;
+      max-height: 20rem;
+      margin-top: 4.5rem;
+    }
+
+    
+}
+
+/** Old responsivnes 
+@media (max-width: 1000px) {
+  .typing-text {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .textbox {
+    max-height: 20rem;
+  }
+
+  .textbox.img-fluid {
+    padding: 0;
+  }
+
+  .typing-text {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .typing-text {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .typing-text {
+    font-size: 1.7rem;
+  }
+
+  .textbox.img-fluid {
+    padding: 0;
+  }
+} **/

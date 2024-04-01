@@ -1,0 +1,13 @@
+.textbox-img {
+    height: 60vh;
+    margin-top: 170px;
+}
+
+.typing-text {
+    font-size: 1rem !important;
+}
+
+.return-icon {
+    width: 1.5rem;
+    margin-right: 20px;
+}
