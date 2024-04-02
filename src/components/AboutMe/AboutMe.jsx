@@ -52,7 +52,7 @@ const AboutMe = () => {
 
                                 <div className="col-6 right-side ">
                                     <div className="info">
-                                        <h4> Developer info </h4>
+                                        <h4> Personal info </h4>
                                         <hr>
                                         </hr>
                                         <h6> Nacionality: Mexican </h6>

@@ -3,78 +3,77 @@ import './Homepage.css';
 import '../Fonts/Fonts.css';
 import textbox from './Images/text-box.png';
 import click from '../../audio/click.mp3';
-
+import audioImage from './Images/audio-icon.png';
 import { Link } from 'react-router-dom';
 import TypingText from './Script';
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
 
 class Homepage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { isTypingFinished: false };
-        this.handleTypingFinished = this.handleTypingFinished.bind(this);
-        this.audioRef = React.createRef();
-    }
-
-    handleTypingFinished() {
-        this.setState({ isTypingFinished: true });
-    }
-    
-    playAudio = () => {
-      const audio = this.audioRef.current;
-      if (audio) {
-        audio.currentTime = 0;
-        audio.play();
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isTypingFinished: false,
+      playAudio: false,
     };
-    
-    render() {
-        return (
-            <body>
-              <main>
-                <div className="container-fluid home-body">
-                    <div className="row main-row justify-content-center">
-                      {/** Column that contains the typing text */}
-                      <div className="col-md-8">
-                          <TypingText onFinished={this.handleTypingFinished} />
-                      </div>
-                      {/** End of column */}
-                    </div>
+    this.handleTypingFinished = this.handleTypingFinished.bind(this);
+    this.handlePlayAudio = this.handlePlayAudio.bind(this);
+  }
 
-                    {/** Row that contains the text-box with options */}
-                    <div className="row bottom-row justify-content-center">
-                      
-                      <div className="col-12 d-flex flex-column flex-md-row align-items-center justify-content-center">
-                        <img className="textbox img-fluid mb-3 mb-md-0 mr-md-3" src={textbox} alt="A textbox" />
-                      </div>
+  handleTypingFinished() {
+    this.setState({ isTypingFinished: true });
+  }
 
-                      <div className="col-6 options-container d-flex justify-content-center align-items-center">
-                        
-                        <p className="d-flex justify-content-center">What'd you like to do next?</p>
-                          
-                        <div className="buttons-container">
-                          {/** Project list button */}
-                          <button type="button" className="btn " onClick={this.playAudio}>
-                            <Link to="/List">Go to my projects</Link>
-                          </button>
-                          {/** End of button */}
+  handlePlayAudio() {
+    this.setState((prevState) => ({ playAudio: !prevState.playAudio }));
+  }
 
-                          {/** Info about me button */}
-                          <button type="button" className="btn" onClick={this.playAudio}>
-                            <Link to="/AboutMe"> Info about me </Link>
-                          </button>
-                          {/** End of button */}
-                          <audio ref={this.audioRef} src={click} preload="auto"/>  
-                          </div> 
-                    </div>
-                    {/** End of row */}
-                           
-                      
-                  </div>
+  render() {
+    const { playAudio } = this.state;
+
+    return (
+      <body>
+        <main>
+          <div className="container-fluid home-body">
+            <div className="row main-row justify-content-center">
+              <div className="col-md-2">Notes</div>
+              {/* Column that contains the typing text */}
+              <div className="col-md-8">
+                <TypingText onFinished={this.handleTypingFinished} />
+              </div>
+              {/* End of column */}
+              <div className="col-md-2 audio-container" onClick={this.handlePlayAudio}>
+                <img src={audioImage} className="audioIcon" alt="Icon of an audio button" />
+                Play audio
+              </div>
+              {playAudio && <AudioPlayer music={click} />}
+            </div>
+            {/* Row that contains the text-box with options */}
+            <div className="row bottom-row justify-content-center">
+              <div className="col-12 d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <img className="textbox img-fluid mb-3 mb-md-0 mr-md-3" src={textbox} alt="A textbox" />
+              </div>
+              <div className="col-6 options-container d-flex justify-content-center align-items-center">
+                <p className="d-flex justify-content-center">What'd you like to do next?</p>
+                <div className="buttons-container">
+                  {/* Project list button */}
+                  <button type="button" className="btn" onClick={this.handlePlayAudio}>
+                    <Link to="/List">Go to my projects</Link>
+                  </button>
+                  {/* End of button */}
+                  {/* Info about me button */}
+                  <button type="button" className="btn" onClick={this.handlePlayAudio}>
+                    <Link to="/AboutMe"> Info about me </Link>
+                  </button>
+                  {/* End of button */}
                 </div>
-              </main>
-            </body>
-          );
-    }
+              </div>
+              {/* End of row */}
+            </div>
+          </div>
+        </main>
+      </body>
+    );
+  }
 }
 
 export default Homepage;

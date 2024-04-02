@@ -30,14 +30,14 @@ function App() {
       <>
             <Homepage music={music} audioRef={audioRef} />
             <audio ref={audioRef} src={music} autoPlay loop />
-            <button onClick={() => setUserInteracted(true)}>Play Audio</button>
+            
       </>
         } />
       <Route path="/List" element={
       <>
             <List  music={music} audioRef={audioRef}/> 
             <audio ref={audioRef} src={music} autoPlay loop />
-            <button onClick={() => setUserInteracted(true)}>Play Audio</button>
+           
             
       </>
         } />
@@ -45,7 +45,6 @@ function App() {
       <>
           <AboutMe  music={music} audioRef={audioRef}/> 
           <audio ref={audioRef} src={music} autoPlay loop />
-          <button onClick={() => setUserInteracted(true)}>Play Audio</button>
       </>
       } />
       

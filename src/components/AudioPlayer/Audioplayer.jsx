@@ -10,7 +10,7 @@ import React, { useRef, useState } from 'react';
     4. The toggle audio const stores a function that is called when user clicks the play/pause button. 
        
 **/
-const Audioplayer = ({ music }) => {
+const AudioPlayer = ({ music }) => {
     const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -23,7 +23,7 @@ const Audioplayer = ({ music }) => {
 
   return (
     <>
-      <audio ref={audioRef} src={music} autoPlay={isPlaying} loop />
+      <audio ref={audioRef} src={music} autoPlay={isPlaying}  />
       <button onClick={toggleAudio}>
         {isPlaying ? 'Pause Audio' : 'Play Audio'}
       </button>
@@ -31,4 +31,4 @@ const Audioplayer = ({ music }) => {
   );
 };
   
-  export default Audioplayer;
+  export default AudioPlayer;

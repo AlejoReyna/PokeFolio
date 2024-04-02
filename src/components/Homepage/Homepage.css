@@ -41,6 +41,14 @@ nav, .home-body {
   font-size: 3.15rem;
 }
 
+.audio-container {
+  font-family: 'PokeGBA';
+  font-size: 12px;
+}
+.audioIcon {
+  width: 30px;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -52,9 +60,7 @@ button {
   text-decoration: none;
 }
 
-a {
-  text-decoration: none;
-}
+
 button:hover {
   text-decoration: underline;
 }
