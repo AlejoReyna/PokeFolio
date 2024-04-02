@@ -15,3 +15,7 @@
 .project-container {
     width: 32rem;
 }
+ 
+* {
+    font-family: 'PokeGBA';
+}

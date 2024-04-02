@@ -3,6 +3,14 @@ import './List.css';
 import Return from './Images/back.png';
 import { useNavigate } from 'react-router-dom';
 import dialogBox from './Images/dialogbox.png';
+
+// Pictures of the logos
+import demonLogo from './Images/Projects/demon-logo.png';
+import tresLogo from './Images/Projects/treslobos-logo.png';
+import mortalLogo from './Images/Projects/mortal-logo.png';
+import bearLogo from './Images/Projects/bearsito.png';
+
+
 const List = () => {
     const navigate = useNavigate();
 
@@ -24,13 +32,40 @@ const List = () => {
                             <div className="col-6">
                                 <div className="left-container d-flex justify-content-center">
                                     <img src={dialogBox} className="project-container" alt="Here goes a project"/>
-                                        |
+                                    {/** Project title */}
+                                    <div className="projectTitle">
+                                            <h4> Platformer DemonList visual update</h4>
+                                    </div>
+
+                                    {/** Preview image */}
+                                    <div className="imageContainer">
+                                        <img src={demonLogo} className="img-fluid" alt="Platformer DemonList logo"/>
+                                        {/** Project description */}
+                                        <div className="projectDescription">
+                                            <p> A visual update I made for the owner of demonlist.com</p>
+                                        </div>
+                                    </div>
+
+                                    
                                 </div>
                             </div>
 
                             <div className="col-6">
                                 <div className="right-container d-flex justify-content-center">
                                     <img src={dialogBox} className="project-container" alt="Here goes a project"/>
+                                    {/** Project title */}
+                                    <div className="projectTitle">
+                                            <h4> Barbershop system </h4>
+                                    </div>
+
+                                     {/** Preview image */}
+                                     <div className="imageContainer">
+                                        <img src={tresLogo} className="img-fluid" alt="Platformer DemonList logo"/>
+                                        {/** Project description */}
+                                        <div className="projectDescription">
+                                            <p>  A system able to generate tickets of appointments in a fictional barbershop. </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -39,13 +74,38 @@ const List = () => {
                             <div className="col-6">
                                 <div className="left-container d-flex justify-content-center">
                                     <img src={dialogBox} className="project-container" alt="Here goes a project"/>
-                                        |
+                                        {/** Project title */}
+                                        <div className="projectTitle">
+                                            <h4> Mortal Kombat 1</h4>
+                                        </div>
+
+                                        {/** Preview image */}
+                                        <div className="imageContainer">
+                                            <img src={mortalLogo} className="img-fluid" alt="Platformer DemonList logo"/>
+                                             {/** Project description */}
+                                            <div className="projectDescription">
+                                                <p> A project made for my Web Development class, made in React. The purpose of the project was to show the understanding of CSS grid system, JavaScript interactions and HTML DOM structuration.  </p>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
 
                             <div className="col-6">
                                 <div className="right-container d-flex justify-content-center">
                                     <img src={dialogBox} className="project-container" alt="Here goes a project"/>
+                                        {/** Project title */}
+                                        <div className="projectTitle">
+                                                <h4>La cafetería del oso</h4>
+                                        </div>
+
+                                        {/** Preview image */}
+                                        <div className="imageContainer">
+                                            <img src={bearLogo} className="img-fluid" alt="Platformer DemonList logo"/>
+                                            {/** Project description */}
+                                            <div className="projectDescription">
+                                                <p> A simple mobile interface of a food selling app. </p>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
