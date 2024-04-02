@@ -47,7 +47,7 @@ class Homepage extends React.Component {
                         <img className="textbox img-fluid mb-3 mb-md-0 mr-md-3" src={textbox} alt="A textbox" />
                       </div>
 
-                      <div className="options-container d-flex flex-column flex-md-row align-items-center">
+                      <div className="col-6 options-container d-flex flex-column flex-md-row align-items-center">
                         <p className="mb-3 mb-md-0 mr-md-3">What'd you like to do next?</p>
                         
                           {/** Project list button */}
