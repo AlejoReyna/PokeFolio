@@ -19,3 +19,7 @@
 .left-side {
     transform: translate(0%, -107%);
 }
+
+.return-icon {
+    width: 30px;
+}

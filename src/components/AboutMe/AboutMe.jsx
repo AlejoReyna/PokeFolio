@@ -1,9 +1,12 @@
-import React, { useState, useNavigate } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Return from './Images/back.png';
 import dialogbox from './Images/dialogbox.png';
 import jsMug from './Images/js-mug.PNG';
 import normalMug from './Images/normal-mug.PNG';
 import './AboutMe.css';
+
 const AboutMe = () => {
 
     const [mugImage, setMugImage] = useState(jsMug);
