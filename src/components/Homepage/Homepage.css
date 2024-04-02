@@ -44,15 +44,25 @@ nav, .home-body {
 button {
   border: none;
   background-color: transparent;
+  
 }
 
+.btn Link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
 button:hover {
   text-decoration: underline;
 }
 
 .options-container {
+    flex-direction: column;
     font-family: 'PokeGBA';
-    transform: translate(0%, -150%);
+    transform: translate(0%, -230%);
 }
 
 /** CSS for the smallest screens **/
@@ -99,40 +109,3 @@ button:hover {
 
     
 }
-
-/** Old responsivnes 
-@media (max-width: 1000px) {
-  .typing-text {
-    font-size: 2.6rem;
-  }
-}
-
-@media (max-width: 810px) {
-  .textbox {
-    max-height: 20rem;
-  }
-
-  .textbox.img-fluid {
-    padding: 0;
-  }
-
-  .typing-text {
-    font-size: 2.4rem;
-  }
-}
-
-@media (max-width: 580px) {
-  .typing-text {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 430px) {
-  .typing-text {
-    font-size: 1.7rem;
-  }
-
-  .textbox.img-fluid {
-    padding: 0;
-  }
-} **/

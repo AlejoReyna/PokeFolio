@@ -47,11 +47,13 @@ class Homepage extends React.Component {
                         <img className="textbox img-fluid mb-3 mb-md-0 mr-md-3" src={textbox} alt="A textbox" />
                       </div>
 
-                      <div className="col-6 options-container d-flex flex-column flex-md-row align-items-center">
-                        <p className="mb-3 mb-md-0 mr-md-3">What'd you like to do next?</p>
+                      <div className="col-6 options-container d-flex justify-content-center align-items-center">
                         
+                        <p className="d-flex justify-content-center">What'd you like to do next?</p>
+                          
+                        <div className="buttons-container">
                           {/** Project list button */}
-                          <button type="button" className="btn mr-md-3 mb-3 mb-md-0" onClick={this.playAudio}>
+                          <button type="button" className="btn " onClick={this.playAudio}>
                             <Link to="/List">Go to my projects</Link>
                           </button>
                           {/** End of button */}
@@ -62,7 +64,7 @@ class Homepage extends React.Component {
                           </button>
                           {/** End of button */}
                           <audio ref={this.audioRef} src={click} preload="auto"/>  
-                          
+                          </div> 
                     </div>
                     {/** End of row */}
                            
