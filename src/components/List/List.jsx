@@ -28,6 +28,7 @@ const List = () => {
                             Code created with blood, sweat and tears!
                         </div>
 
+                        {/** Begining of the row container of the projects (half) */}
                         <div className="row list-row">
                             <div className="col-6">
                                 <div className="left-container d-flex justify-content-center">
@@ -46,29 +47,29 @@ const List = () => {
                                         </div>
                                     </div>
 
-                                    
                                 </div>
                             </div>
 
-                            <div className="col-6">
-                                <div className="right-container d-flex justify-content-center">
-                                    <img src={dialogBox} className="project-container" alt="Here goes a project"/>
+                        <div className="col-6">
+                            <div className="right-container d-flex justify-content-center">
+                                <img src={dialogBox} className="project-container" alt="Here goes a project"/>
                                     {/** Project title */}
                                     <div className="projectTitle">
                                             <h4> Barbershop system </h4>
                                     </div>
 
-                                     {/** Preview image */}
-                                     <div className="imageContainer">
+                                    {/** Preview image */}
+                                    <div className="imageContainer">
                                         <img src={tresLogo} className="img-fluid" alt="Platformer DemonList logo"/>
                                         {/** Project description */}
                                         <div className="projectDescription">
-                                            <p>  A system able to generate tickets of appointments in a fictional barbershop. </p>
+                                                <p>  A system able to generate tickets of appointments in a fictional barbershop. </p>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                    {/** End of half row */}
 
                         <div className="row list-row">
                             <div className="col-6">

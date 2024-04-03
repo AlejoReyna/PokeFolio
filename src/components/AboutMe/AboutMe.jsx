@@ -47,7 +47,7 @@ const AboutMe = () => {
                       {/** Container of the text */}
                     
                     {/** Row that contains the information */}
-                    <div className="row bottom-row justify-content-center">
+                    <div className="row justify-content-center">
                         
                         {/** Left side column: On this side goes the cartoonized version of me */}
                         <div className="col-6 left-side">
