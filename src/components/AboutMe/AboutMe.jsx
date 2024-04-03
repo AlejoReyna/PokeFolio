@@ -36,7 +36,7 @@ const AboutMe = () => {
                     {/** Row that contains the textbox with information */}
                     <div className="row justify-content-center">
                     <img src={Return} className="return-icon" alt="Go back to homepage" onClick={handleGoBack} />
-  
+                    Back to home
                       {/** Column that contains the dialog box */}
                       <div className="col-12 d-flex align-items-center justify-content-center">
                         <img className="dialogbox" src={dialogbox} alt="A textbox" />
@@ -48,13 +48,13 @@ const AboutMe = () => {
                             <div className="row justify-content-center">
                             
                                 
-                                <div className="col-6 left-side d-flex justify-content-center">
+                                <div className="col-6 left-side">
                                
                                <img src={mugImage} className="its-me" alt="Cartoon of me"/> 
                                 </div>
 
-                                <div className="col-6 right-side ">
-                                    <div className="info">
+                                <div className="col-3 right-side d-flex justify-content-center">
+                                    <div className="info ">
                                         <h4> Personal info </h4>
                                         <hr>
                                         </hr>
@@ -74,12 +74,15 @@ const AboutMe = () => {
                                     <br>
                                     </br>
                                     <br>
-                                    </br><br>
+                                    </br>
+                                    <br>
                                     </br>
                                     
+                                    {/** 
                                     <div className="changeImage">
                                         <button onClick={handleImageChange}> {changeImageText} </button>
                                     </div>
+                                    */}
                                 </div>
                           
                       </div>
