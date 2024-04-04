@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import TypingText from './Script';
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
 
+
 interface HomepageProps {}
 
 const Homepage: React.FC<HomepageProps> = () => {
@@ -21,26 +22,6 @@ const Homepage: React.FC<HomepageProps> = () => {
   const handlePlayAudio = () => {
     setPlayAudio(!playAudio);
   }
-{/**  - Old code -
-class Homepage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isTypingFinished: false,
-      playAudio: false,
-    };
-    this.handleTypingFinished = this.handleTypingFinished.bind(this);
-   
-  }
-
-  handleTypingFinished() {
-    this.setState({ isTypingFinished: true });
-  }
-  render() {
-    const { playAudio } = this.state;
-
-*/}
-
 
 
   
@@ -51,7 +32,7 @@ class Homepage extends React.Component {
             <div className="row main-row justify-content-center">
        
               {/* Column that contains the typing text */}
-              <div className="col-md-8">
+              <div className="col-md-8 typing-text">
                 <TypingText onFinished={handleTypingFinished} />
               </div>
               {/* End of column */}

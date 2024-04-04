@@ -38,7 +38,7 @@ nav, .home-body {
 .typing-text {
   text-align: center;
   font-family: 'PokeGBA';
-  font-size: 3.15rem;
+  font-size: 0.3rem;
 }
 
 .audio-container {
@@ -78,6 +78,11 @@ button:hover {
         font-size: 1.6rem;
     }
 
+    .textbox {
+      margin-top: 10rem ;
+    }
+
+    
 }
 
 /** CSS for small screens **/
@@ -86,6 +91,8 @@ button:hover {
         font-size: 2rem;
     }
     
+    
+
     
 
     .options-container {
