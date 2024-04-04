@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'; // useRef and useEffect are hooks needed to autoplay music
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from "./components/Homepage/Homepage";
+import Homepage from "./components/Homepage/Homepage.tsx";
 import List from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
 import './App.css';

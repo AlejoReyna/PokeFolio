@@ -71,6 +71,7 @@ button:hover {
     transform: translate(0%, -230%);
 }
 
+
 /** CSS for the smallest screens **/
 @media (min-width: 360px) {
     .typing-text {
@@ -84,6 +85,12 @@ button:hover {
     .typing-text {
         font-size: 2rem;
     }
+    
+    
+
+    .options-container {
+      font-size: 10px;
+   }
 
 }
 
