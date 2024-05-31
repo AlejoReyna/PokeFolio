@@ -6,14 +6,11 @@ import click from '../../audio/click.mp3';
 import audioImage from './Images/audio-icon.png';
 import { Link } from 'react-router-dom';
 import TypingText from './Script';
-import AudioPlayer from '../AudioPlayer/AudioPlayer';
 
 
-interface HomepageProps {}
-
-const Homepage: React.FC<HomepageProps> = () => {
-  const [isTypingFinished, setIsTypingFinished] = useState<boolean>(false);
-  const [playAudio, setPlayAudio] = useState<boolean>(false);
+const Homepage = () => {
+  const [isTypingFinished, setIsTypingFinished] = useState(false);
+  const [playAudio, setPlayAudio] = useState(false);
 
   const handleTypingFinished = () => {
     setIsTypingFinished(true);
@@ -22,7 +19,6 @@ const Homepage: React.FC<HomepageProps> = () => {
   const handlePlayAudio = () => {
     setPlayAudio(!playAudio);
   }
-
 
   
     return (
@@ -50,7 +46,7 @@ const Homepage: React.FC<HomepageProps> = () => {
 
               </div>
               <div className="col-6 options-container d-flex justify-content-center align-items-center">
-                <p className="d-flex justify-content-center">What'd you like to do next?</p>
+                <p className="header-textbox d-flex justify-content-center">What'd you like to do next?</p>
                 <div className="buttons-container">
                   {/* Project list button */}
                   <button type="button" className="btn" onClick={handlePlayAudio}>

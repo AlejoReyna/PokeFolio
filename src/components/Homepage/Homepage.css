@@ -99,12 +99,21 @@ button:hover {
       font-size: 10px;
    }
 
+   .textbox {
+    margin-top: 3rem ;
+
+ 
+  }
 }
 
 /** CSS for medium screens **/
 @media (min-width: 768px) {
     .typing-text {
         font-size: 2.4rem;
+    }
+
+    .textbox {
+      margin-top: 10rem ;
     }
 }
 
