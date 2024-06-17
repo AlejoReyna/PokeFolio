@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import TypingText from './Script';
 
 
-const Homepage = () => {
+const Homepage = ({ music, audioRef, setUserInteracted }) => {
   const [isTypingFinished, setIsTypingFinished] = useState(false);
   const [playAudio, setPlayAudio] = useState(false);
 
@@ -17,9 +17,8 @@ const Homepage = () => {
   }
 
   const handlePlayAudio = () => {
-    setPlayAudio(!playAudio);
-  }
-
+    setUserInteracted(true);
+  };
   
     return (
       <body>
@@ -36,7 +35,7 @@ const Homepage = () => {
 
               <div className='col-md-2 audio-btn'>
                 <img src={ audioImage } className='audioIcon' />
-                <button className='btn'> Play audio </button>
+                <button className='btn' onClick={handlePlayAudio}> Play audio </button>
               </div>
               
             </div>

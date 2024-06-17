@@ -10,19 +10,14 @@ import AudioPlayer from "./components/AudioPlayer/Audioplayer";
 
 
 function App() {
-
-  // Function to reproduce the background music
   const audioRef = useRef(null);
-  // Next line adds a state variable to track user interaction
   const [userInteracted, setUserInteracted] = useState(false);
-
-  //Plays audio only when user has interacted
   useEffect(() => {
     if (userInteracted) {
-      audioRef.current.play()
+      const audio = new Audio(music);
+      audio.play();
     }
-  }, [userInteracted]);
-  // End of function
+  }, [userInteracted, music]);
 
   return (
     <Router>
@@ -30,15 +25,15 @@ function App() {
       <Routes>
         <Route path="/" element={ 
         <>
-              <Homepage music={music} audioRef={audioRef} />
-              <audio ref={audioRef} src={music} autoPlay loop />
+              <Homepage music={music} audioRef={audioRef} setUserInteracted={setUserInteracted}  />
+             
               
         </>
           } />
         <Route path="/List" element={
         <>
               <List  music={music} audioRef={audioRef}/> 
-              <audio ref={audioRef} src={music} autoPlay loop />
+              
             
               
         </>
@@ -46,7 +41,7 @@ function App() {
         <Route path="/AboutMe" element={
         <>
             <AboutMe  music={music} audioRef={audioRef}/> 
-            <audio ref={audioRef} src={music} autoPlay loop />
+            
         </>
         } />
 
