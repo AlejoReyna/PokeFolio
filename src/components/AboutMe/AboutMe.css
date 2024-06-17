@@ -15,7 +15,7 @@ img.return-icon{
 }
 
 .right-side {
-    transform: translate(0%, -85%);
+    transform: translate(0%, -105%);
 }
 
 .its-me {
@@ -25,3 +25,5 @@ img.return-icon{
     transform: translate(0%, -107%);
 }
 
+@media (min-width: 268px) {
+}

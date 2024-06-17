@@ -27,30 +27,32 @@ function App() {
   return (
     <Router>
     <Navbar/>
-    <Routes>
-      <Route path="/" element={ 
-      <>
-            <Homepage music={music} audioRef={audioRef} />
-            <audio ref={audioRef} src={music} autoPlay loop />
+      <Routes>
+        <Route path="/" element={ 
+        <>
+              <Homepage music={music} audioRef={audioRef} />
+              <audio ref={audioRef} src={music} autoPlay loop />
+              
+        </>
+          } />
+        <Route path="/List" element={
+        <>
+              <List  music={music} audioRef={audioRef}/> 
+              <audio ref={audioRef} src={music} autoPlay loop />
             
-      </>
-        } />
-      <Route path="/List" element={
-      <>
-            <List  music={music} audioRef={audioRef}/> 
+              
+        </>
+          } />
+        <Route path="/AboutMe" element={
+        <>
+            <AboutMe  music={music} audioRef={audioRef}/> 
             <audio ref={audioRef} src={music} autoPlay loop />
-           
-            
-      </>
+        </>
         } />
-      <Route path="/AboutMe" element={
-      <>
-          <AboutMe  music={music} audioRef={audioRef}/> 
-          <audio ref={audioRef} src={music} autoPlay loop />
-      </>
-      } />
-      
-    </Routes>
+
+       
+        
+      </Routes>
     </Router>
   );
 }

@@ -1,15 +1,11 @@
 import React from 'react';
 import './List.css';
 import Return from './Images/back.png';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import dialogBox from './Images/dialogbox.png';
-
-// Pictures of the logos
-import demonLogo from './Images/Projects/demon-logo.png';
-import tresLogo from './Images/Projects/treslobos-logo.png';
-import mortalLogo from './Images/Projects/mortal-logo.png';
-import bearLogo from './Images/Projects/bearsito.png';
-
+import Mortal from './Images/Projects/mortal.png';
+import UANL from './Images/Projects/uanl.png';
 
 const List = () => {
     const navigate = useNavigate();
@@ -22,92 +18,83 @@ const List = () => {
         <body>
             <main>
                 <div className="container-fluid home-body">
-                    <div className="row main-row justify-content-center">
-                        <div className="col-md-12 typing-text">
-                            <img src={Return} className="return-icon" alt="Go back to homepage" onClick={handleGoBack} />
-                            Code created with blood, sweat and tears!
+                    <div className="row justify-content-center">
+                        <div className="col-md-12">
+                            <div className='back-to-home d-flex align-items-center'>
+                                <img src={Return} className="return-icon" alt="Go back to homepage" onClick={handleGoBack} />
+                                <p className='pt-4'> Back to homepage </p>
+                            </div>
                         </div>
 
                         {/** Begining of the row container of the projects (half) */}
                         <div className="row list-row">
-                            <div className="col-6">
-                                <div className="left-container d-flex justify-content-center">
-                                    <img src={dialogBox} className="project-container" alt="Here goes a project"/>
-                                    {/** Project title */}
-                                    <div className="projectTitle">
-                                            <h4> Platformer DemonList visual update</h4>
+                            <div className="col-6 col-xs-12">
+                                <div className='project-container row'>
+                                    <div className='col-6'>
+                                    <img src={ Mortal } className='project-preview' alt='Mortal Kombat page project preview'></img>
+
                                     </div>
 
-                                    {/** Preview image */}
-                                    <div className="imageContainer">
-                                        <img src={demonLogo} className="img-fluid" alt="Platformer DemonList logo"/>
-                                        {/** Project description */}
-                                        <div className="projectDescription">
-                                            <p> A visual update I made for the owner of demonlist.com</p>
+                                    <div className='col-6'>
+                                        <div className='project-title'>
+                                            <h3> Mortal Kombat 1 </h3>
+                                            <h6> A fan-made promotional website</h6>
+                                            <Link to="https://mortal-kombat-gamma.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                                <button type="btn">Visit</button>
+                                            </Link>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
 
-                        <div className="col-6">
-                            <div className="right-container d-flex justify-content-center">
-                                <img src={dialogBox} className="project-container" alt="Here goes a project"/>
-                                    {/** Project title */}
-                                    <div className="projectTitle">
-                                            <h4> Barbershop system </h4>
+                            <div className="col-6 col-xs-12">
+                                
+                                <div className='project-container row'>
+                                    <div className='col-6'>
+                                    <img src={UANL} className='project-preview' alt='SIASE Reworked project preview'></img>
+
                                     </div>
 
-                                    {/** Preview image */}
-                                    <div className="imageContainer">
-                                        <img src={tresLogo} className="img-fluid" alt="Platformer DemonList logo"/>
-                                        {/** Project description */}
-                                        <div className="projectDescription">
-                                                <p>  A system able to generate tickets of appointments in a fictional barbershop. </p>
+                                    <div className='col-6'>
+                                        <div className='project-title'>
+                                            <h3> SIASE Reworked interface </h3>
+                                            <h6> The UANL SIASE reworked because the actual sucks </h6>
+                                            <Link to="https://uanl-interface.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                                <button type="btn">Visit</button>
+                                            </Link>
                                         </div>
                                     </div>
+                                </div>
+                            <div>
+                                
                             </div>
+                            
                         </div>
                     </div>
+
+                    <hr className='mt-3'></hr>
                     {/** End of half row */}
 
                         <div className="row list-row">
                             <div className="col-6">
-                                <div className="left-container d-flex justify-content-center">
-                                    <img src={dialogBox} className="project-container" alt="Here goes a project"/>
-                                        {/** Project title */}
-                                        <div className="projectTitle">
-                                            <h4> Mortal Kombat 1</h4>
-                                        </div>
+                                <div className='project-container row'>
+                                    <div className='col-6'>
+                                    </div>
 
-                                        {/** Preview image */}
-                                        <div className="imageContainer">
-                                            <img src={mortalLogo} className="img-fluid" alt="Platformer DemonList logo"/>
-                                             {/** Project description */}
-                                            <div className="projectDescription">
-                                                <p> A project made for my Web Development class, made in React. The purpose of the project was to show the understanding of CSS grid system, JavaScript interactions and HTML DOM structuration.  </p>
-                                            </div>
+                                    <div className='col-6'>
+                                        <div className='project-title'>
+                                            <h3> The Bear cafeteria </h3>
+                                            <h6> A cute cafeteria website </h6>
+                                            <Link to="https://react-cafeta.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                                <button type="btn">Visit</button>
+                                            </Link>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="col-6">
-                                <div className="right-container d-flex justify-content-center">
-                                    <img src={dialogBox} className="project-container" alt="Here goes a project"/>
-                                        {/** Project title */}
-                                        <div className="projectTitle">
-                                                <h4>La cafetería del oso</h4>
-                                        </div>
-
-                                        {/** Preview image */}
-                                        <div className="imageContainer">
-                                            <img src={bearLogo} className="img-fluid" alt="Platformer DemonList logo"/>
-                                            {/** Project description */}
-                                            <div className="projectDescription">
-                                                <p> A simple mobile interface of a food selling app. </p>
-                                            </div>
-                                        </div>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>

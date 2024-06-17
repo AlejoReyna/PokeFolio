@@ -26,12 +26,18 @@ const Homepage = () => {
         <main>
           <div className="container-fluid home-body">
             <div className="row main-row justify-content-center">
+              <div className='col-md-2'></div>
        
               {/* Column that contains the typing text */}
               <div className="col-md-8 typing-text">
                 <TypingText onFinished={handleTypingFinished} />
               </div>
               {/* End of column */}
+
+              <div className='col-md-2 audio-btn'>
+                <img src={ audioImage } className='audioIcon' />
+                <button className='btn'> Play audio </button>
+              </div>
               
             </div>
 
@@ -46,17 +52,17 @@ const Homepage = () => {
 
               </div>
               <div className="col-6 options-container d-flex justify-content-center align-items-center">
-                <p className="header-textbox d-flex justify-content-center">What'd you like to do next?</p>
+                <p className="header-textbox d-flex justify-content-center m-0">What'd you like to do next?</p>
                 <div className="buttons-container">
                   {/* Project list button */}
-                  <button type="button" className="btn" onClick={handlePlayAudio}>
-                    <Link to="/List">Go to my projects</Link>
+                  <button type="button" className="btn " onClick={handlePlayAudio}>
+                    <Link to="/List" className='text-decoration-none'>Go to my projects</Link>
                   </button>
                   {/* End of button */}
 
                   {/* Info about me button */}
                   <button type="button" className="btn" onClick={handlePlayAudio}>
-                    <Link to="/AboutMe"> Info about me </Link>
+                    <Link to="/AboutMe" className='text-decoration-none'> Info about me </Link>
                   </button>
                   {/* End of button */}
                 </div>

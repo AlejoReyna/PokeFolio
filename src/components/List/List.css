@@ -1,18 +1,16 @@
-.textbox-img {
-    height: 60vh;
-    margin-top: 170px;
+.project-preview {
+    width: 20rem;
 }
-
-
-
 .return-icon {
-    width: 1.5rem;
     margin-right: 20px;
 }
 
-.project-container {
-    width: 32rem;
+.list-menu {
+    height: 70vh;
 }
+
+
+
  
 * {
     font-family: 'PokeGBA';

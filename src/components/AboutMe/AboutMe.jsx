@@ -38,55 +38,51 @@ const AboutMe = () => {
                         {/** Going back to homepage */}
                         <img src={Return} className="return-icon" alt="Go back to homepage" onClick={handleGoBack} />
                         Back to home
-                      {/** Column that contains the dialog box */}
-                      <div className="col-12 d-flex align-items-center justify-content-center">
-                        <img className="dialogbox" src={dialogbox} alt="A textbox" />
-                      </div>
-                      {/** End of column */}
-                      
-                      {/** Container of the text */}
-                    
-                    {/** Row that contains the information */}
-                    <div className="row justify-content-center">
-                        
-                        {/** Left side column: On this side goes the cartoonized version of me */}
-                        <div className="col-6 left-side">
-                               
-                            <img src={mugImage} className="its-me" alt="Cartoon of me"/> 
-                        
+                        {/** Column that contains the dialog box */}
+                        <div className="col-12 d-flex align-items-center justify-content-center">
+                            <img className="dialogbox" src={dialogbox} alt="A textbox" />
                         </div>
-                        {/** End of left-side column */}
+                        {/** End of column */}
+                      
+                    
+                        {/** Row that contains the information */}
+                        <div className="row justify-content-center">
+                            
+                            {/** Left side column: On this side goes the cartoonized version of me */}
+                            <div className="col-5 left-side">
+                            
+                                <img src={mugImage} className="its-me" alt="Cartoon of me"/> 
+                            
+                            </div>
+                            {/** End of left-side column */}
 
 
-                        {/** Right side column: On this side goes the information about myself */}
-                        <div className="col-3 right-side d-flex justify-content-center">
-                            <div className="info ">
-                                <h4> Personal info </h4>
-                                <hr/>
-                                <h6> Nacionality: Mexican </h6>
-                                <h6> Age: 22 years old </h6>
-                                <h6> Idioms: Spanish - Native, English - Profesional </h6>
-                                <h6> Coding languages: JavaScript </h6>
-                                <h6> Hobbies: Playing guitar, playing videogames and excercising!</h6>
+                            {/** Right side column: On this side goes the information about myself */}
+                            <div className="col-4 right-side d-flex justify-content-center">
+                                <div className="info ">
+                                    <h4> Personal info </h4>
+                                    <hr/>
+                                    <h6> Nacionality: Mexican </h6>
+                                    <h6> Age: 22 years old </h6>
+                                    <h6> Idioms: 
+                                    <br>
+                                    </br> Spanish - Native 
+                                    <br></br> English - Profesional </h6>
+                                    <h6> Coding languages: JavaScript </h6>
+                                    <h6> Hobbies: Playing guitar, playing videogames and excercising!</h6>
 
-                                
-                                <div className="changeImage d-flex justify-content-center">
-                                    <button onClick={handleImageChange}> {changeImageText} </button>
+                                    
+                                    <div className="changeImage d-flex justify-content-center">
+                                        <button onClick={handleImageChange}> {changeImageText} </button>
+                                    </div>
                                 </div>
                             </div>
-                                    
-                            
-                          
-                                   
+                            {/** End of right-side column */}
                         </div>
-                        {/** End of right-side column */}
-                          
-                    </div>
 
-                </div>
+                    </div>
                     {/** End of row */}
                 </div>
-
             </main>
         </body>
         );
