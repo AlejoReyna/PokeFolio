@@ -5,8 +5,8 @@ import List from "./components/List/List";
 import Navbar from "./components/Navbar/Navbar";
 import './App.css';
 import music from './audio/pokemon.mp3';
+import click from './audio/click.mp3';
 import AboutMe from "./components/AboutMe/AboutMe";
-import AudioPlayer from "./components/AudioPlayer/Audioplayer";
 
 
 function App() {
@@ -16,8 +16,17 @@ function App() {
     if (userInteracted) {
       const audio = new Audio(music);
       audio.play();
+
+      audioRef.current = audio;
     }
   }, [userInteracted, music]);
+
+  const handleUserInteraction = () => {
+    const clickSound = new Audio(click);
+    clickSound.play();
+
+    setUserInteracted(true);
+  };
 
   return (
     <Router>
@@ -25,7 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={ 
         <>
-              <Homepage music={music} audioRef={audioRef} setUserInteracted={setUserInteracted}  />
+              <Homepage music={music} clickSound={click} audioRef={audioRef} setUserInteracted={setUserInteracted}  />
              
               
         </>

@@ -1,25 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import './Homepage.css';
 import '../Fonts/Fonts.css';
 import textbox from './Images/text-box.png';
-import click from '../../audio/click.mp3';
 import audioImage from './Images/audio-icon.png';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import TypingText from './Script';
 
-
-const Homepage = ({ music, audioRef, setUserInteracted }) => {
+const Homepage = ({ music, audioRef, clickSound, setUserInteracted }) => {
   const [isTypingFinished, setIsTypingFinished] = useState(false);
-  const [playAudio, setPlayAudio] = useState(false);
+  const navigate = useNavigate(); // Hook to navigate
+
+  useEffect(() => {
+    if (audioRef.current && !audioRef.current.playing) {
+      audioRef.current.play();
+    }
+  }, [audioRef]);
 
   const handleTypingFinished = () => {
     setIsTypingFinished(true);
   }
 
   const handlePlayAudio = () => {
+    if (!audioRef.current) {
+       // Just begin the music reproduction if it hasn't begun
+      const musicAudio = new Audio(music);
+      musicAudio.loop = true; 
+      audioRef.current = musicAudio;
+      musicAudio.play();
+      }
     setUserInteracted(true);
   };
+
+  const handleButtonClick = (path) => {
   
+    const clickAudio = new Audio(clickSound);
+    clickAudio.play().then(() => {
+      // Navigate to the route specified after the audio is reproduced
+      navigate(path);
+    }).catch((error) => {
+      console.error("Error al reproducir el sonido de click: ", error);
+      navigate(path); // Even if there's an error, it will navigate to the route
+    });
+  };
+
     return (
       <body>
         <main>
@@ -38,6 +61,7 @@ const Homepage = ({ music, audioRef, setUserInteracted }) => {
                 <button className='btn' onClick={handlePlayAudio}> Play audio </button>
               </div>
               
+              
             </div>
 
 
@@ -54,14 +78,14 @@ const Homepage = ({ music, audioRef, setUserInteracted }) => {
                 <p className="header-textbox d-flex justify-content-center m-0">What'd you like to do next?</p>
                 <div className="buttons-container">
                   {/* Project list button */}
-                  <button type="button" className="btn " onClick={handlePlayAudio}>
-                    <Link to="/List" className='text-decoration-none'>Go to my projects</Link>
+                  <button type="button" className="btn" onClick={() => handleButtonClick('/List')}>
+                    Go to my projects
                   </button>
                   {/* End of button */}
 
                   {/* Info about me button */}
-                  <button type="button" className="btn" onClick={handlePlayAudio}>
-                    <Link to="/AboutMe" className='text-decoration-none'> Info about me </Link>
+                  <button type="button" className="btn" onClick={() => handleButtonClick('/AboutMe')}>
+                     Info about me
                   </button>
                   {/* End of button */}
                 </div>
@@ -74,7 +98,6 @@ const Homepage = ({ music, audioRef, setUserInteracted }) => {
       </body>
     );
   }
-
 
 
 export default Homepage;
