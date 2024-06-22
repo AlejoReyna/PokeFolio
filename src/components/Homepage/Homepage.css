@@ -133,6 +133,17 @@ button:hover {
   }
 }
 
+/* Estilo base para los botones */
+.buttons-container .btn {
+  transition: transform 0.3s ease-in-out; /* Añade una transición suave */
+}
+
+/* Efecto hover para elevar las palabras dentro de los botones */
+.buttons-container .btn:hover {
+  transform: translateY(-5px); /* Eleva el botón 5px hacia arriba */
+}
+
+
 /** CSS for medium screens **/
 @media (min-width: 768px) and (max-width: 992px){
     .typing-text {
