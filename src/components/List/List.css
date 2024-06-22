@@ -9,6 +9,20 @@
     height: 70vh;
 }
 
+/* Define la animación blink */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Totalmente visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+}
+
+/* Aplica la animación a la clase .return-icon */
+.return-icon {
+    animation: blink 1.5s infinite; /* 1s es la duración de un ciclo completo */
+}
 
 
  
