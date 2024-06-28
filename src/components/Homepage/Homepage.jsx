@@ -48,18 +48,20 @@ const Homepage = ({ music, audioRef, clickSound, setUserInteracted }) => {
         <main>
           <div className="container-fluid home-body">
             <div className="row main-row justify-content-center">
-              <div className='col-md-2'></div>
-       
+            <div className='col-md-2 audio-btn'>
+                <img src={ audioImage } className='audioIcon' />
+                <button className='btn' onClick={handlePlayAudio}> Play audio </button>
+              </div>
               {/* Column that contains the typing text */}
               <div className="col-md-8 typing-text">
                 <TypingText onFinished={handleTypingFinished} />
               </div>
               {/* End of column */}
 
-              <div className='col-md-2 audio-btn'>
-                <img src={ audioImage } className='audioIcon' />
-                <button className='btn' onClick={handlePlayAudio}> Play audio </button>
-              </div>
+              <div className='col-md-2'></div>
+
+              
+             
               
               
             </div>

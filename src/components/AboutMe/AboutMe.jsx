@@ -45,12 +45,12 @@ const AboutMe = () => {
                             </div>
                                 
                             {/** Left side column: On this side goes the cartoonized version of me */}
-                            <div className="col-12 col-md-5 left-side">
+                            <div className="col-6 col-md-5 left-side">
                                 <img src={mugImage} className="its-me" alt="Cartoon of me"/> 
                             </div>
 
                             {/** Right side column: On this side goes the information about myself */}
-                            <div className="col-12 col-md-4 right-side d-flex justify-content-center">
+                            <div className="col-6 col-md-4 right-side d-flex justify-content-center">
                                 <div className="info ">
                                     <h4> Personal info </h4>
                                     <hr/>
