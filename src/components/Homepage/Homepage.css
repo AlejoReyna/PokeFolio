@@ -15,7 +15,6 @@ nav, .home-body {
 .home-body {
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   background-position: center;
   background-attachment: fixed;
 }
@@ -37,7 +36,7 @@ nav, .home-body {
 .textbox {
   max-height: 16rem;
   
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 /* Styles for the typing text function */
@@ -60,6 +59,11 @@ nav, .home-body {
   font-size: 13px;
 }
 
+.textbox {
+  max-height: 20rem;
+  margin-top: 4.5rem;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -75,6 +79,7 @@ button:hover {
 }
 
 .options-container {
+  width: 100%;
     flex-direction: column;
     font-family: 'PokeGBA';
     transform: translate(0%, -270%);
@@ -94,15 +99,15 @@ button:hover {
     }
 
     .options-container {
-      transform: translate(0%, -100%);
+      transform: translate(0%, -300%);
     }
 
     .header-textbox{ 
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
-    .buttons-container a {
-      font-size: 0.7rem;
+    .buttons-container button {
+      font-size: 0.8rem;
     }
     
 
@@ -115,25 +120,21 @@ button:hover {
         font-size: 2rem;
     }
 
-    .textbox {
-      max-height: 20rem;
-      margin-top: 4.5rem;
-    }
+   
 
    .options-container {
-    transform: translate(0%, -120%);
+    transform: translate(0%, -300%);
   }
 
-  .header-textbox{ 
-    font-size: 1.2rem;
-  }
-
-  .buttons-container a {
+  .header-textbox{
     font-size: 0.9rem;
+  }
+
+  .buttons-container button {
+    font-size: 0.8rem;
   }
 }
 
-/* Estilo base para los botones */
 .buttons-container .btn {
   transition: transform 0.3s ease-in-out; /* Añade una transición suave */
 }
@@ -150,10 +151,7 @@ button:hover {
         font-size: 2.4rem;
     }
 
-    .textbox {
-      max-height: 20rem;
-      margin-top: 4.5rem;
-    }
+    
 }
 
 /** CSS for large screens **/
@@ -162,11 +160,7 @@ button:hover {
         font-size: 2.8rem;
     }
 
-    .textbox {
-      max-height: 20rem;
-      margin-top: 4.5rem;
-    }
-    
+  
 }
 
 /** CSS for extra-large screens **/
@@ -175,9 +169,6 @@ button:hover {
         font-size: 3.2rem;
     }
 
-    .textbox {
-      max-height: 20rem;
-      margin-top: 4.5rem;
-    }
+    
 
 }

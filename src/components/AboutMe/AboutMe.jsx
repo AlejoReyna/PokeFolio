@@ -32,33 +32,25 @@ const AboutMe = () => {
     return (
         <body>
             <main>
-                <div className="container-fluid home-body">
-                    {/** Row that contains the textbox */}
-                    <div className="row main-row justify-content-center">
+                    <div className="container-fluid home-body">
+                        {/** Row that contains the textbox */}
                         {/** Going back to homepage */}
                         <img src={Return} className="return-icon" alt="Go back to homepage" onClick={handleGoBack} />
                         Back to home
-                        {/** Column that contains the dialog box */}
-                        <div className="col-12 d-flex align-items-center justify-content-center">
-                            <img className="dialogbox" src={dialogbox} alt="A textbox" />
-                        </div>
-                        {/** End of column */}
                       
-                    
                         {/** Row that contains the information */}
                         <div className="row justify-content-center">
-                            
-                            {/** Left side column: On this side goes the cartoonized version of me */}
-                            <div className="col-5 left-side">
-                            
-                                <img src={mugImage} className="its-me" alt="Cartoon of me"/> 
-                            
+                            <div className="col-12 col-md-12 d-flex align-items-center justify-content-center">
+                                <img className="dialogbox" src={dialogbox} alt="A textbox" />
                             </div>
-                            {/** End of left-side column */}
-
+                                
+                            {/** Left side column: On this side goes the cartoonized version of me */}
+                            <div className="col-12 col-md-5 left-side">
+                                <img src={mugImage} className="its-me" alt="Cartoon of me"/> 
+                            </div>
 
                             {/** Right side column: On this side goes the information about myself */}
-                            <div className="col-4 right-side d-flex justify-content-center">
+                            <div className="col-12 col-md-4 right-side d-flex justify-content-center">
                                 <div className="info ">
                                     <h4> Personal info </h4>
                                     <hr/>
@@ -82,7 +74,6 @@ const AboutMe = () => {
 
                     </div>
                     {/** End of row */}
-                </div>
             </main>
         </body>
         );

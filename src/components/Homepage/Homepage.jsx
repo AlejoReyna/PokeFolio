@@ -74,7 +74,7 @@ const Homepage = ({ music, audioRef, clickSound, setUserInteracted }) => {
                 {/** End of side containers code */}
 
               </div>
-              <div className="col-6 options-container d-flex justify-content-center align-items-center">
+              <div className="col-12 options-container d-flex justify-content-center align-items-center">
                 <p className="header-textbox d-flex justify-content-center m-0">What'd you like to do next?</p>
                 <div className="buttons-container">
                   {/* Project list button */}

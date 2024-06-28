@@ -27,10 +27,10 @@ const List = () => {
                         </div>
 
                         {/** Begining of the row container of the projects (half) */}
-                        <div className="row list-row">
-                            <div className="col-6 col-xs-12">
-                                <div className='project-container row'>
-                                    <div className='col-6'>
+                        <div className="row">
+
+                                <div className='row'>
+                                    <div className='col-6 d-flex justify-content-center'>
                                     <img src={ Mortal } className='project-preview' alt='Mortal Kombat page project preview'></img>
 
                                     </div>
@@ -44,15 +44,18 @@ const List = () => {
                                             </Link>
                                         </div>
                                     </div>
+
+                                   
                                 </div>
-                            </div>
 
-                            <div className="col-6 col-xs-12">
+                                <hr className='mt-3'></hr>
+
+
+    
                                 
-                                <div className='project-container row'>
-                                    <div className='col-6'>
-                                    <img src={UANL} className='project-preview' alt='SIASE Reworked project preview'></img>
-
+                                <div className='row'>
+                                    <div className='col-6 d-flex justify-content-center'>
+                                        <img src={UANL} className='project-preview' alt='SIASE Reworked project preview'/>
                                     </div>
 
                                     <div className='col-6'>
@@ -64,8 +67,10 @@ const List = () => {
                                             </Link>
                                         </div>
                                     </div>
-                                </div>
-                            <div>
+                                <div>
+
+                                <hr className='mt-3'></hr>
+
                                 
                             </div>
                             
@@ -75,10 +80,11 @@ const List = () => {
                     <hr className='mt-3'></hr>
                     {/** End of half row */}
 
-                        <div className="row list-row">
-                            <div className="col-6">
-                                <div className='project-container row'>
+                        <div className="row">
+                                <div className='row'>
                                     <div className='col-6'>
+                                    <img src={ Mortal } className='project-preview' alt='Mortal Kombat page project preview'></img>
+
                                     </div>
 
                                     <div className='col-6'>
@@ -91,7 +97,7 @@ const List = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
 
                             <div className="col-6">
                                

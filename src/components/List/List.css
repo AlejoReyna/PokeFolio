@@ -29,3 +29,15 @@
 * {
     font-family: 'PokeGBA';
 }
+
+@media (min-width: 360px) and (max-width: 576px) {
+    .project-preview {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .project-preview {
+        max-width: 100%;
+    }
+}

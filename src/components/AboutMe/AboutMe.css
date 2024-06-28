@@ -10,7 +10,7 @@ img.return-icon{
 }
 
 .dialogbox {
-    width: 85%;
+    width: 100%;
     height: 95vh;
 }
 
@@ -25,5 +25,14 @@ img.return-icon{
     transform: translate(0%, -107%);
 }
 
-@media (min-width: 268px) {
+@media (min-width: 360px) and (max-width: 576px) {
+    .dialogbox {
+        height: 10vh;
+    }
+
+    .its-me {
+        height: 30vh;
+    }
+    
+
 }
