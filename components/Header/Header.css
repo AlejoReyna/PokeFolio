@@ -1,0 +1,36 @@
+
+
+/** CSS for the smallest screens **/
+@media (min-width: 360px) {
+    .nav-text {
+        font-size: 0.6rem;
+    }
+}
+
+/** CSS for small screens **/
+@media (min-width: 576px) {
+    .nav-text  {
+        font-size: 0.7rem;
+    }
+}
+
+/** CSS for medium screens **/
+@media (min-width: 768px) {
+    .nav-text {
+        font-size: 0.9rem;
+    }
+}
+
+/** CSS for large screens **/
+@media (min-width: 992px) {
+    .nav-text {
+    font-size: 1.1rem;
+    }
+}
+
+/** CSS for extra-large screens **/
+@media (min-width:1200px) {
+    .nav-text {
+        font-size: 1.3rem;
+    }
+}
