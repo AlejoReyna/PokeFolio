@@ -4,19 +4,16 @@ import birdlyImage from '@/public/images/birdlyPreview.png';
 
 export interface Project {
     title: string;
-    image: StaticImageData;
     info: string;
 }
 
 export const projects: Project[] = [
     {
-        title: "Proyecto 1",
-        image: mkImage,
-        info: "Información del proyecto 1"
+        title: "Presale website of the videogame 'Mortal Kombat 1'",
+        info: "This website simulates the funcionality of a preorders system, where you input your e-mail and in consequence you get a mail, confirming your preorder."
     },
     {
         title: "Proyecto 2",
-        image: birdlyImage,
         info: "Información del proyecto 2"
     }
 ];
