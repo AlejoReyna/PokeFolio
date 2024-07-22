@@ -15,6 +15,9 @@ p.hover-effect:hover {
     .typing-text {
         font-size: 1.3rem;
     }
+    .option {
+        font-size: 0.8rem;
+    }
 }
 
 /** CSS for small screens **/

@@ -1,3 +1,7 @@
 .arrow {
     max-height: 3rem;
 }
+
+.opac-black {
+    background-color: rgba(0, 0, 0, 0.5);
+}

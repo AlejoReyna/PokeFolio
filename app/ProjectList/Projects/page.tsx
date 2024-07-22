@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import './projects.css';
 import { projects, Project } from './Script/Projects';
-import LeftArrow from '@/public/images/left-arrow.png';
-import RightArrow from '@/public/images/right-arrow.png';
+import LeftArrow from '@public/images/left-arrow.png';
+import RightArrow from '@public/images/right-arrow.png';
 
 interface ProjectComponentProps {}
 
@@ -35,15 +35,22 @@ const ProjectComponent: React.FC<ProjectComponentProps> = () => {
 
                 <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-4">
                     <div className='projectImage w-full md:w-1/2 mb-4 md:mb-0'>
-                        <div className="relative w-full rounded-2xl overflow-hidden aspect-square">
-                            <video autoPlay loop muted className="w-full h-full object-cover">
-                                <source src="/videos/preview-mk.mp4" type="video/mp4"/>
+                        <div className="relative  w-full rounded overflow-hidden aspect-square">
+                            <video
+                             key={currentProject.video}
+                             autoPlay 
+                             loop 
+                             muted 
+                             className="w-full h-full object-cover "
+                             >
+                                <source src={currentProject.video} type="video/mp4" />
+                                Your browser does not support the video tag.
                             </video>
                         </div>
                     </div>
 
-                    <div className='flex flex-col w-full md:w-1/2 items-start md:ml-8'>
-                        <div className='projectTitle text-left mb-4 text-2xl md:text-3xl font-bold'>
+                    <div className='flex opac-black p-5 h-100 text-white flex-col w-full md:w-1/2 items-start md:ml-8'>
+                        <div className='projectTitle text-left mb-4 text-xl md:text-xl font-bold'>
                             {currentProject.title}
                         </div>
                         <p className="text-left text-sm md:text-base">{currentProject.info}</p>
