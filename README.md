@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+https://github.com/user-attachments/assets/4761d619-6c26-4440-992f-e775c1f71b1f
+
+
+## PokeFolio - My developer portfolio.
+
+Hello! This is Alexis Reyna, and as I mentioned in the title, this is the website where I upload my code creations. 
+
+### Main Component: Homepage
+<hr/>
+
+The component renders a layout with the following elements:
+1. A typing text animation at the top.
+2. A dialog box (Pokemon-style) that appears after the typing animation finishes, containing:
+   - A music player component
+   - A question prompting user action
+   - Two interactive options:
+     - "Go to my projects" (functional)
+     - "Under construction" (placeholder [at least in July 22nd, the time I'm writing this)
+    
+The Homepage component uses the useState hook to manage whether the typing animation has finished, and the useRouter hook for navigation.
+
+```typescript
+export default function HomepageComponent() {
+    const [isTypingFinished, setIsTypingFinished] = useState(false);
+    const router = useRouter();
+```
+<hr/>
+
+The audioFiles array defines the background music tracks available for playback, which I'll show later.
+(Btw, I don't own the tracks, and I'm not making any money with them, please Nintendo, don't sue me)
+
+```typescript
+const audioFiles = [
+        { name: 'Ecruteak City', url: 'tracks/Ecruteak-City.mp3' },
+        { name: 'National Park', url: 'tracks/National-Park.mp3' },
+        { name: 'PokeViolet City', url: 'tracks/PokeViolet-City.mp3' },
+    ];
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- handleFinished logs a message when all tracks have been played.
+- goToProjects uses the Next.js router to navigate to the ProjectList page.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```typescript
+   const handleFinished = () => {
+        console.log('All tracks have been played');
+    };
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    const goToProjects = (): void => {
+        router.push('ProjectList');
+    };
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
