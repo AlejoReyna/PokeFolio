@@ -42,7 +42,9 @@ export const MusicComponent: React.FC<MusicComponentProps> = ({ audioFiles, onFi
             setCurrentTrack((prev) => (prev + 1) % audioFiles.length);
             setIsPlaying(true);
             setTimeout(() => {
-                audioRef.current.play();
+                if (audioRef.current) {
+                    audioRef.current.play();
+                }
             }, 0);
         }
     };
@@ -53,11 +55,12 @@ export const MusicComponent: React.FC<MusicComponentProps> = ({ audioFiles, onFi
             setCurrentTrack((prev) => (prev - 1 + audioFiles.length) % audioFiles.length);
             setIsPlaying(true);
             setTimeout(() => {
-                audioRef.current.play();
+                if (audioRef.current) {
+                    audioRef.current.play();
+                }
             }, 0);
         }
     };
-
     return (
         <div className="audio-container flex">
             <Image src={musicIcon} width={48} height={48} alt="A pixelated music icon"/>
