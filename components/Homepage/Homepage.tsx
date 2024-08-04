@@ -8,6 +8,7 @@ import { MusicComponent } from './Script/Music';
 import Image from "next/image";
 import './Homepage.css';
 
+
 interface HomepageProps {
     music: string;
     audioRef: MutableRefObject<HTMLAudioElement | null>;
@@ -19,15 +20,7 @@ export default function HomepageComponent() {
     const [isTypingFinished, setIsTypingFinished] = useState(false);
     const router = useRouter();
 
-    const audioFiles = [
-        { name: 'Ecruteak City', url: 'tracks/Ecruteak-City.mp3' },
-        { name: 'National Park', url: 'tracks/National-Park.mp3' },
-        { name: 'PokeViolet City', url: 'tracks/PokeViolet-City.mp3' },
-    ];
 
-    const handleFinished = () => {
-        console.log('All tracks have been played');
-    };
 
     const goToProjects = (): void => {
         router.push('ProjectList');
@@ -45,7 +38,7 @@ export default function HomepageComponent() {
                     <Image src={DialogBox} alt={'A Pokemon Dialog Box'} className="w-full h-auto"/>
                     <div className="text-black absolute inset-0 flex flex-col justify-center items-center p-6">
                         <div className="audio-container">
-                        <MusicComponent audioFiles={audioFiles} onFinished={handleFinished} />
+                        <MusicComponent />
                         </div>
                         <p className="text-sm sm:text-base md:text-lg text-center w-full mb-4">
                         What would you like to do next?
