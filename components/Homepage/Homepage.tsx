@@ -40,7 +40,7 @@ export default function HomepageComponent() {
                         <div className="audio-container">
                         <MusicComponent />
                         </div>
-                        <p className="text-sm sm:text-base md:text-lg text-center w-full mb-4">
+                        <p id="second-textbox-line" className="text-sm sm:text-base md:text-lg text-center w-full mb-4">
                         What would you like to do next?
                         </p>
                         <div className="flex justify-center items-center w-full space-x-4">

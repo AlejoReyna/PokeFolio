@@ -18,7 +18,7 @@ export const MusicComponent: React.FC = () => {
     }, [currentTrack, audioFiles, isPlaying, audioRef]);
 
     return (
-        <div className="audio-container flex">
+        <div id="first-textbox-line" className="audio-container flex">
             <Image src={musicIcon} width={48} height={48} alt="A pixelated music icon"/>
             <audio
                 ref={audioRef}

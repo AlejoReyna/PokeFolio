@@ -15,8 +15,17 @@ p.hover-effect:hover {
     .typing-text {
         font-size: 1.3rem;
     }
+
     .option {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
+    }
+
+    #second-textbox-line {
+        font-size: 0.7rem;
+    }
+
+    #first-textbox-line {
+        font-size: 0.7rem;
     }
 }
 
@@ -46,4 +55,5 @@ p.hover-effect:hover {
     .typing-text {
         font-size: 2.8rem;
     }
+
 }
