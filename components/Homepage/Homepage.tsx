@@ -22,10 +22,13 @@ export default function HomepageComponent() {
 
 
 
-    const goToProjects = (): void => {
+    const goToProjects: () => void = (): void => {
         router.push('ProjectList');
-    };
-
+      };
+      
+      const goToAboutMe: () => void = (): void => {
+        router.push('AboutMe');
+      };
     return (
         <div className="background min-h-screen flex flex-col justify-between">
             <div className="typing-text justify-center text-black w-full max-w-4xl mx-auto px-4">
@@ -47,8 +50,8 @@ export default function HomepageComponent() {
                             <div className="goToProjects cursor-pointer" onClick={goToProjects}>
                                 <p className="hover-effect option text-center">Go to my projects</p>
                             </div>
-                            <div className="cursor-pointer">
-                               <p className="hover-effect option text-center"> Under construction </p>
+                            <div className="cursor-pointer" >
+                               <p className="hover-effect option text-center"> Under construction</p>
                             </div>
                         </div>
                     </div>

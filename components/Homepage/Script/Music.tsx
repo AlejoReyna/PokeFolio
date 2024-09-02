@@ -4,6 +4,10 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import musicIcon from '@public/images/music-icon.png';
 import { useMusic } from '@components/MusicContext';
+import { IoPlaySkipBack } from "react-icons/io5";
+import { FaPlay } from "react-icons/fa";
+import { IoPlaySkipForward } from "react-icons/io5";
+import { FaPause } from "react-icons/fa";
 
 export const MusicComponent: React.FC = () => {
     const { audioFiles, currentTrack, isPlaying, audioRef, playPause, nextTrack, prevTrack } = useMusic();
@@ -24,9 +28,11 @@ export const MusicComponent: React.FC = () => {
                 ref={audioRef}
                 onEnded={nextTrack}
             />
-            <button onClick={prevTrack} className='m-2'>Previous</button>
-            <button onClick={playPause} className='m-2'>{isPlaying ? 'Pause' : 'Play'}</button>
-            <button onClick={nextTrack} className='m-2'>Next</button>
+            <button onClick={prevTrack} className='m-2'> <IoPlaySkipBack /> </button>
+            <button onClick={playPause} className='m-2'>
+            {isPlaying ? <FaPause /> : <FaPlay />}
+            </button>
+            <button onClick={nextTrack} className='m-2'> <IoPlaySkipForward /> </button>
         </div>
     )
 }
