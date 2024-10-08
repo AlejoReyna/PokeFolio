@@ -3,10 +3,13 @@
 
 https://github.com/user-attachments/assets/4761d619-6c26-4440-992f-e775c1f71b1f
 
-
 ## PokeFolio - My developer portfolio.
 
-Hello! This is Alexis Reyna, and as I mentioned in the title, this is the website where I upload my code creations. 
+Note from October, 7h, 2024:
+- Music controlls are bugged, sometimes it plays slowly in navigators, maybe too much weight?
+- Music doesn't continue while changing of page, it starts from begining.
+- 
+Hello! This is Alexis Reyna, and as I mentioned in the title, this is the website where I upload my code creations.
 
 ### Main Component: Homepage
 <hr/>
