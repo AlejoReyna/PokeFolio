@@ -1,0 +1,113 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+  font-family: "Pokemon GB";
+  src: url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.eot?") format("eot"),
+       url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.woff") format("woff"),
+       url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.ttf") format("truetype"),
+       url("https://dl.dropboxusercontent.com/u/10822923/Pokemon_GB/Pokemon_GB.svg#PokemonGB") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sound-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.sound-alert-container {
+    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.pokemon-dialog-box {
+    font-size: 12px;
+    font-family: "Pokemon GB", Arial, sans-serif;
+    border-radius: 2px;
+    padding: 16px;
+    width: 320px;
+    min-height: 80px;
+    line-height: 20px;
+    margin: auto;
+    background: white;
+    border: 1px solid white;
+    box-shadow: 0 1px 0 1px black,
+                inset 0 1px 0 1px black,
+                0 0 0 1px black,
+                inset 0 0 0 1px black;
+    color: black;
+    position: relative;
+}
+
+.pokemon-dialog-box .question-text {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.pokemon-dialog-box .options-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pokemon-dialog-box .option {
+    font-family: "Pokemon GB", Arial, sans-serif;
+    font-size: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.pokemon-dialog-box .option:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.pokemon-dialog-box > i {
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: black;
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    animation: bounce 0.5s ease-in-out 0 infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from { 
+        bottom: 5px; 
+    }
+    to { 
+        bottom: 8px; 
+    }
+} 

@@ -2,10 +2,9 @@
 
 import React, { useState, useEffect, MutableRefObject } from 'react';
 import { useRouter } from 'next/navigation';
-import DialogBox from '@public/images/text-box.png';
 import { TypingText } from './Script/TypingText';
 import { MusicComponent } from './Script/Music';
-import Image from "next/image";
+import { PokemonDialogBox } from './PokemonDialogBox';
 import './Homepage.css';
 
 
@@ -38,7 +37,7 @@ export default function HomepageComponent() {
 
             <div className={`w-full max-w-[700px] mx-auto px-4 mb-4 transition-opacity duration-1000 ${isTypingFinished ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="relative">
-                    <Image src={DialogBox} alt={'A Pokemon Dialog Box'} className="w-full h-auto"/>
+                    <PokemonDialogBox className="w-full h-auto"/>
                     <div className="text-black absolute inset-0 flex flex-col justify-center items-center p-6">
                         <div className="audio-container">
                         <MusicComponent />
